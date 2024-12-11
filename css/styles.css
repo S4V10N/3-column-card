@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+*{
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+:root{
+    /* BOX_COLORS */
+    --BRIGHT-YELLOW: hsl(31, 77%, 52%);
+    --DARK-CYAN: hsl(184, 100%, 22%);
+    --VERY-DARK-CYAN: hsl(179, 100%, 13%);
+    /* NEUTRAL_COLORS */
+    --TRANSPARENT-WHITE: hsla(0, 0%, 100%, 0.75);
+    --VERY-LIGHT-GRAY: hsl(0, 0%, 95%);
+    /* FOR (background, headings, buttons) */
+}
+body{
+    padding: 6rem 1.2rem;
+    font-family: "Lexend Deca", sans-serif;
+    background-color: var(--VERY-LIGHT-GRAY);
+}
+p{
+    font-size: 1.7rem;
+    color: var(--TRANSPARENT-WHITE);
+}
+h1{
+    font-family: "Big Shoulders Display", serif;
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 2rem 0rem;
+    text-transform: uppercase;
+    color: var(--VERY-LIGHT-GRAY);
+}
+.yellow,.cyan,.dark{
+    height: 50rem;
+    padding: 4rem 4rem 2rem 4rem;
+    margin: 0rem auto;
+}
+.yellow{
+    background-color: var(--BRIGHT-YELLOW);
+    border-radius: 0.6rem 0.6rem 0rem 0rem;
+}
+.cyan{
+    background-color: var(--DARK-CYAN);
+}
+.dark{
+    background-color: var(--VERY-DARK-CYAN);
+    border-radius: 0rem 0rem 0.6rem 0.6rem;
+}
+section div{
+    font-size: 2.1rem;
+    width: 16rem;
+    height: 6rem;
+    border-radius: 3rem;
+    background-color: var(--TRANSPARENT-WHITE);
+    display: grid;
+    place-content: center;
+    padding: 0.4rem;
+    margin-top: 8rem;
+}
+section div:active, section div:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border: 0.2rem solid var(--TRANSPARENT-WHITE);
+}
+@media (min-width: 600px) {
+    body{
+        display: grid;
+        place-content: center;
+    }
+    .cyan,.dark,.yellow{
+        max-height: 44rem;
+        /* max-width: 80%; */
+    }
+    .yellow{
+        border-radius: 0.6rem 0.6rem 0rem 0rem;
+    }
+    .dark{
+        border-radius: 0rem 0rem 0.6rem 0.6rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    body{
+        height: 100vh;
+        display: grid;
+        place-content: center;
+    }
+    main{
+        display: flex;
+        height: fit-content;
+        width: fit-content;
+    }
+    .cyan,.dark,.yellow{
+        max-height: 50rem;
+        max-width: 36rem;
+        position: relative;
+    }
+    .yellow{
+        border-radius: 0.6rem 0rem 0rem 0.6rem;
+    }
+    .dark{
+        border-radius: 0rem 0.6rem 0.6rem 0rem;
+    }
+    section div{
+        position: absolute;
+        bottom: 15%;
+    }
+}
